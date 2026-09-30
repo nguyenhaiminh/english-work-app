@@ -79,3 +79,11 @@ body{background:radial-gradient(circle at 80% -10%,rgba(91,167,255,.22),transpar
 
 /* Keyboard and contrast audit */
 button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(37,126,216,.3);outline-offset:3px}.primary-button:focus-visible,.nav-item:focus-visible{outline-color:#8dd5ff}.lesson-main,.grammar-layout,.quiz-area{color:#10213a}.formula-grid p,.use-list strong,.mistake-box del,.mistake-box strong{color:#17304f}.lesson-main .annotation,.grammar-header p{color:#687b94}.history-item strong,.mastery-row strong{color:#17304f}.chat-message.bot p{color:#273b54}.chat-message.user p{color:#fff}
+
+/* Readability: larger text on navigation, exercises and assistant */
+.nav-item{font-size:15px}.sidebar-tip p{font-size:12px}.sidebar-tip strong,.profile-card strong{font-size:13px}.profile-card small{font-size:10px}
+.topbar>div>p:last-child,.page-header>div>p:last-child{font-size:15px}.back-button,.text-button,.primary-button,.secondary-button{font-size:14px}
+.plan-card h3{font-size:17px}.plan-card p,.topic-card p{font-size:13px}.plan-card small,.topic-card footer,.metrics-grid p{font-size:11px}.metrics-grid small{font-size:10px}
+.quiz-progress span{font-size:13px}.quiz-area h2{font-size:31px}.answers button{font-size:15px;line-height:1.5}.answers button b{font-size:12px}.feedback{font-size:14px}.feedback strong{font-size:15px}.feedback p{line-height:1.7}
+.chat-header strong{font-size:15px}.chat-header small{font-size:11px}.chat-message p{font-size:13px;line-height:1.65}.chat-suggestions button{font-size:11px}.chat-form input{font-size:13px}.chat-disclaimer{font-size:9px}.chat-toggle{font-size:13px}
+@media(max-width:620px){.nav-item{font-size:14px}.quiz-area h2{font-size:27px}.answers button{font-size:14px}.chat-message p{font-size:12px}}
