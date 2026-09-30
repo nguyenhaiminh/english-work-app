@@ -78,8 +78,11 @@ document.addEventListener('click',event=>{if(innerWidth<=900&&!$('#sidebar').con
 const hour=new Date().getHours();$('#todayLabel').textContent=hour<12?'KHỞI ĐỘNG BUỔI SÁNG':hour<18?'TIẾP TỤC TIẾN BỘ':'ÔN TẬP BUỔI TỐI';bindTopics();renderLibrary();renderGrammar();updateUI();
 
 const chatPanel=$('#chatPanel'),chatMessages=$('#chatMessages'),chatInput=$('#chatInput');
-$('#chatToggle').onclick=()=>{chatPanel.classList.add('open');setTimeout(()=>chatInput.focus(),250)};
-$('#chatClose').onclick=()=>chatPanel.classList.remove('open');
+const openChat=()=>{chatPanel.classList.add('open');chatPanel.setAttribute('aria-hidden','false');setTimeout(()=>chatInput.focus(),250)};
+const closeChat=()=>{chatPanel.classList.remove('open');chatPanel.setAttribute('aria-hidden','true');$('#chatToggle').focus()};
+$('#chatToggle').onclick=openChat;
+$('#chatClose').onclick=closeChat;
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&chatPanel.classList.contains('open'))closeChat()});
 function chatAnswer(question){const q=question.toLowerCase();
   if(q.includes('will')||q.includes('going to'))return '<b>Will</b> dùng cho quyết định ngay lúc nói, lời hứa hoặc dự đoán mang tính ý kiến. <b>Be going to</b> dùng cho dự định có từ trước hoặc dự đoán có bằng chứng.<br><br>Ví dụ: “I’ll answer the phone.” / “Look at the clouds! It’s going to rain.”';
   if(q.includes('hoàn thành')||q.includes('present perfect')||q.includes('since')||q.includes('for'))return 'Hiện tại hoàn thành có công thức <b>have/has + V3</b>. Dùng cho trải nghiệm, kết quả còn liên quan đến hiện tại, hoặc việc bắt đầu trong quá khứ và còn tiếp tục. <b>Since</b> + mốc thời gian; <b>for</b> + khoảng thời gian.';

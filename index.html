@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v2.css?v=20261001-quiz-fix" />
+  <link rel="stylesheet" href="styles-v2.css?v=20261001-chat-fix" />
 </head>
 <body>
   <div class="page-decor decor-grid" aria-hidden="true"></div>
@@ -71,15 +71,15 @@
       </section>
     </main>
   </div>
-  <button id="chatToggle" class="chat-toggle" aria-label="Mở trợ lý tiếng Anh"><span>✦</span><b>Hỏi Lingo</b></button>
-  <aside id="chatPanel" class="chat-panel" aria-label="Trợ lý tiếng Anh">
-    <header class="chat-header"><div><span>✦</span><div><strong>Lingo AI</strong><small><i></i> Trợ lý ngữ pháp</small></div></div><button id="chatClose" aria-label="Đóng">×</button></header>
+  <button type="button" id="chatToggle" class="chat-toggle" aria-label="Mở trợ lý tiếng Anh"><span>✦</span><b>Hỏi Lingo</b></button>
+  <aside id="chatPanel" class="chat-panel" aria-label="Trợ lý tiếng Anh" aria-hidden="true">
+    <header class="chat-header"><div><span>✦</span><div><strong>Lingo AI</strong><small><i></i> Trợ lý ngữ pháp</small></div></div><button type="button" id="chatClose" aria-label="Đóng chatbot">×</button></header>
     <div id="chatMessages" class="chat-messages"><div class="chat-message bot"><span>L</span><p>Chào Minh! Bạn muốn hỏi gì về ngữ pháp tiếng Anh? Mình có thể giải thích các thì, mạo từ, modal verbs và câu điều kiện.</p></div></div>
     <div class="chat-suggestions"><button>Phân biệt will và going to</button><button>Khi nào dùng hiện tại hoàn thành?</button></div>
     <form id="chatForm" class="chat-form"><input id="chatInput" autocomplete="off" placeholder="Nhập câu hỏi của Minh..." aria-label="Câu hỏi"/><button type="submit" aria-label="Gửi">↑</button></form>
     <p class="chat-disclaimer">Trợ lý kiến thức tích hợp · Không cần đăng nhập</p>
   </aside>
   <div id="toast" class="toast" role="status"></div>
-  <script src="app.js"></script>
+  <script src="app.js?v=20261001-chat-fix"></script>
 </body>
 </html>
