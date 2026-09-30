@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#16251f" />
+  <title>Lingo — Học tiếng Anh có hệ thống</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-v2.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-go="home"><span class="brand-mark">L</span><span><strong>lingo</strong><small>ENGLISH LAB</small></span></a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Tổng quan</button>
+        <button class="nav-item" data-view="library"><span>▦</span> Lộ trình</button>
+        <button class="nav-item" data-view="grammar"><span>✦</span> Học ngữ pháp</button>
+        <button class="nav-item" data-view="practice"><span>✓</span> Luyện tập</button>
+        <button class="nav-item" data-view="progress"><span>↗</span> Tiến độ</button>
+      </nav>
+      <div class="sidebar-tip"><span>💡</span><p><strong>Mẹo hôm nay</strong>Học một cấu trúc qua 3 ví dụ của chính bạn.</p></div>
+      <div class="profile-card"><div class="avatar">M</div><div><strong>Minh</strong><small>Trình độ A2 · Sơ cấp</small></div><button aria-label="Tùy chọn">•••</button></div>
+    </aside>
+
+    <main>
+      <header class="mobile-header"><a class="brand" href="#" data-go="home"><span class="brand-mark">L</span><strong>lingo</strong></a><button id="menuButton" aria-label="Mở menu">☰</button></header>
+
+      <section id="homeView" class="view active">
+        <header class="topbar"><div><p class="eyebrow" id="todayLabel">LỘ TRÌNH CỦA BẠN</p><h1>Chào Minh, sẵn sàng tiến bộ? <span>👋</span></h1><p>15 phút tập trung hôm nay sẽ tạo nên khác biệt lớn.</p></div><div class="streak-pill"><span>🔥</span><div><b data-streak>4</b><small>ngày liên tiếp</small></div></div></header>
+        <article class="hero-card">
+          <div class="hero-copy"><span class="level-tag">BÀI HỌC ĐỀ XUẤT · A2</span><h2>Present simple<br><em>vs.</em> continuous</h2><p>Phân biệt “I work” và “I am working” bằng ngữ cảnh thực tế, không học thuộc máy móc.</p><div class="hero-meta"><span>◷ 12 phút</span><span>◉ 8 ví dụ</span><span>✎ 5 câu luyện</span></div><button class="primary-button lime" data-topic="present-tenses">Bắt đầu bài học <span>→</span></button></div>
+          <div class="hero-visual"><div class="visual-label">TODAY'S FOCUS</div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="word-card card-a"><small>ROUTINE</small><b>I work every day.</b></div><div class="word-card card-b"><small>RIGHT NOW</small><b>I'm working now.</b></div><div class="hero-number">01</div></div>
+        </article>
+        <div class="section-title"><div><p class="eyebrow">HÔM NAY</p><h2>Kế hoạch 15 phút</h2></div><button class="text-button" data-go="library">Xem toàn bộ lộ trình →</button></div>
+        <div class="today-grid">
+          <button class="plan-card" data-topic="present-tenses"><span class="plan-index">01</span><div><small>NGỮ PHÁP · 12 PHÚT</small><h3>Hiện tại đơn & hiện tại tiếp diễn</h3><p>Nắm công thức, dấu hiệu và cách dùng trong công việc.</p></div><span class="arrow">↗</span></button>
+          <button class="plan-card accent" data-start-quiz><span class="plan-index">02</span><div><small>LUYỆN TẬP · 3 PHÚT</small><h3>Thử thách nhanh 5 câu</h3><p>Nhận giải thích chi tiết ngay sau mỗi đáp án.</p></div><span class="arrow">↗</span></button>
+        </div>
+        <div class="metrics-grid"><article><span class="metric-icon purple">✦</span><div><small>ĐÃ HỌC</small><strong id="homeCompleted">0 / 8</strong><p>chủ điểm ngữ pháp</p></div></article><article><span class="metric-icon orange">◷</span><div><small>THỜI GIAN</small><strong id="homeMinutes">32 phút</strong><p>tổng thời gian học</p></div></article><article><span class="metric-icon green">◎</span><div><small>ĐỘ CHÍNH XÁC</small><strong id="homeAccuracy">—</strong><p>trong các bài luyện</p></div></article></div>
+      </section>
+
+      <section id="libraryView" class="view">
+        <header class="page-header"><div><p class="eyebrow">LỘ TRÌNH A1 → B1</p><h1>Ngữ pháp từ gốc đến ứng dụng</h1><p>8 chủ điểm cốt lõi, sắp xếp theo độ khó và tình huống sử dụng.</p></div><div class="level-switch"><button class="active">Tất cả</button><button>A1</button><button>A2</button><button>B1</button></div></header>
+        <div class="library-summary"><div><strong id="libraryDone">0%</strong><span>Hoàn thành lộ trình</span></div><div class="summary-bar"><i id="libraryBar"></i></div><p><b id="libraryCount">0</b>/8 bài đã học</p></div>
+        <div id="topicGrid" class="topic-grid"></div>
+      </section>
+
+      <section id="grammarView" class="view">
+        <button class="back-button" data-go="library">← Quay lại lộ trình</button>
+        <div id="grammarContent"></div>
+      </section>
+
+      <section id="practiceView" class="view">
+        <button class="back-button" data-go="home">← Quay lại</button>
+        <div class="practice-shell">
+          <div id="quizIntro" class="quiz-intro"><span class="quiz-symbol">✓</span><p class="eyebrow">LUYỆN TẬP THÔNG MINH</p><h1>Kiểm tra điều bạn vừa học</h1><p>10 câu hỏi bao quát các thì, modal verbs, mạo từ và câu điều kiện. Mỗi câu đều có giải thích bằng tiếng Việt.</p><div class="quiz-features"><span>10 câu hỏi</span><span>Khoảng 7 phút</span><span>Giải thích tức thì</span></div><button class="primary-button" id="startQuiz">Bắt đầu luyện tập →</button></div>
+          <div id="quizArea" class="quiz-area hidden"></div><div id="resultArea" class="result-area hidden"></div>
+        </div>
+      </section>
+
+      <section id="progressView" class="view">
+        <header class="page-header"><div><p class="eyebrow">HÀNH TRÌNH CỦA BẠN</p><h1>Tiến bộ đều, không cần vội</h1><p>Mỗi bài hoàn thành là một bước gần hơn đến phản xạ tự nhiên.</p></div></header>
+        <div class="progress-stats"><article><small>CHUỖI HỌC</small><strong><span data-streak>4</span> ngày</strong><p>Kỷ lục hiện tại 🔥</p></article><article><small>TỔNG THỜI GIAN</small><strong id="totalMinutes">32 phút</strong><p>Tích lũy từ các bài học</p></article><article><small>ĐIỂM TỐT NHẤT</small><strong id="bestScore">—</strong><p>Bài kiểm tra tổng hợp</p></article></div>
+        <div class="progress-layout"><article class="mastery-card"><div class="section-title compact"><div><p class="eyebrow">MỨC ĐỘ THÀNH THẠO</p><h2>Theo chủ điểm</h2></div></div><div id="masteryList"></div></article><article class="history-card"><p class="eyebrow">HOẠT ĐỘNG GẦN ĐÂY</p><h2>Lịch sử học tập</h2><div id="historyList"></div></article></div>
+      </section>
+    </main>
+  </div>
+  <button id="chatToggle" class="chat-toggle" aria-label="Mở trợ lý tiếng Anh"><span>✦</span><b>Hỏi Lingo</b></button>
+  <aside id="chatPanel" class="chat-panel" aria-label="Trợ lý tiếng Anh">
+    <header class="chat-header"><div><span>✦</span><div><strong>Lingo AI</strong><small><i></i> Trợ lý ngữ pháp</small></div></div><button id="chatClose" aria-label="Đóng">×</button></header>
+    <div id="chatMessages" class="chat-messages"><div class="chat-message bot"><span>L</span><p>Chào Minh! Bạn muốn hỏi gì về ngữ pháp tiếng Anh? Mình có thể giải thích các thì, mạo từ, modal verbs và câu điều kiện.</p></div></div>
+    <div class="chat-suggestions"><button>Phân biệt will và going to</button><button>Khi nào dùng hiện tại hoàn thành?</button></div>
+    <form id="chatForm" class="chat-form"><input id="chatInput" autocomplete="off" placeholder="Nhập câu hỏi của Minh..." aria-label="Câu hỏi"/><button type="submit" aria-label="Gửi">↑</button></form>
+    <p class="chat-disclaimer">Trợ lý kiến thức tích hợp · Không cần đăng nhập</p>
+  </aside>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
